@@ -1,11 +1,11 @@
 let AdddRoom = require('../models/AddRoom');
-const UserModel = require('../models/UserModel');
+const UserModel = require('../models/User');
 const { unlink } = require('fs')
 const path = require('path');
 const TanentAds = require('../models/TanentAds');
 
-
 const roomController = {};
+
 roomController.basedir = path.join(__dirname, '../uploads/');
 
 function dataObject(req) {

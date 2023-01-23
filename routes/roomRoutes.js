@@ -2,7 +2,7 @@ const express = require('express')
 const upload = require('../helpers/uploadHelper')
 const router = express.Router();
 const roomController = require('../controllers/roomController');
-const UserModel = require('../models/UserModel');
+const UserModel = require('../models/User');
 // const UserModel = require('../models/UserModel');
 router.post('/addRoom', upload.array('files', 10), roomController.addRoom);
 router.post('/tanentAds', upload.array('files', 2), roomController.tanentAds);
@@ -23,6 +23,6 @@ router.get('/' , (req, res, next) => {
 })
 
 
-module.exports = {
+module.exports = {    
     routes: router,
 }
