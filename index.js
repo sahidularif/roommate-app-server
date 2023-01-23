@@ -28,12 +28,6 @@ const server = app.listen(port, () => {
     console.log('Connected to port ' + port)
 })
 
-// app.use((req, res, next) => {
-//     // Error goes via `next()` method
-//     setImmediate(() => {
-//         next(new Error('Something went wrong'));
-//     });
-// });
 app.use("*", (req, res) => {
     res.status(404).send({
       success: "false",
